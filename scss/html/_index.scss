@@ -1,0 +1,482 @@
+// Links 
+
+@import "../utilidades/variables";
+@import "../utilidades/extends";
+@import "../utilidades/mixin";
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    .container-fluid {
+            display: flex;
+            justify-content: center;
+          }       
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-grow: 1;
+              }
+                img {
+                    width: 10%;
+                    }
+    .logo-cel {
+      width: 5%;
+      @include mobile {
+        margin-left: 9%;
+        width: 10%;
+      }
+    }
+}
+                        
+.grid-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-auto-flow: dense;
+    grid-template-areas: 
+      "banner banner banner"
+      "bienvenido bienvenido bienvenido"
+      "clases clases clases"
+      "contratar contratar contratar"
+      "paso-uno paso-dos paso-tres"
+      "elegir elegir elegir"
+      "cualidad-uno cualidad-dos cualidad-tres"
+      "cualidad-cuatro cualidad-cinco cualidad-seis"; 
+
+              @include mobile {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-areas: 
+                "banner banner"
+                "bienvenido bienvenido"
+                "clases clases"
+                "contratar contratar"
+                "paso-uno paso-uno"
+                "paso-dos paso-dos"
+                "paso-tres paso-tres"
+                "elegir elegir"
+                "cualidad-uno cualidad-dos" 
+                "cualidad-tres cualidad-cuatro"
+                "cualidad-cinco cualidad-seis"; 
+            }
+
+              @include tablet{
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-auto-flow: dense;
+                grid-template-areas: 
+                "banner banner"
+                "bienvenido bienvenido"
+                "clases clases"
+                "contratar contratar"
+                "paso-uno paso-uno"
+                "paso-dos paso-dos"
+                "paso-tres paso-tres"
+                "elegir elegir"
+                "cualidad-uno cualidad-dos" 
+                "cualidad-tres cualidad-cuatro"
+                "cualidad-cinco cualidad-seis"; 
+            } 
+
+              @include desktop;
+    
+    
+    .container {
+        position: relative;
+        height: 200px;
+      }
+      
+      .background-image {
+        grid-area: banner;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 75%;
+        background-image: url(../images/vista-cerca-estudiante-conduciendo-automovil-e-instructor-lista-verificacion.jpg);
+        background-position: center 35%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.9;
+        @extend .sombra;
+        @include mobile {
+            height: 60%;
+        }
+        @include tablet {
+          height: 61%;
+        }
+      }
+      
+      .content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        text-align: left;
+        padding: 20px;
+        margin-top: 350px;
+        @extend .animacion-seleccion;
+        @include mobile {
+          margin-top: 65%;
+      }
+        @include tablet {
+          margin-top: 45%;
+        }
+      }
+      
+      h1, h4 {
+        color: rgb(253, 253, 253);
+        @extend .sombra-texto;
+      }
+      
+      hr {
+        width: 20%;
+        border: none;
+        border-top: 2px solid rgb(0, 0, 0);
+        margin: 10px 0;
+      }
+      
+      .contact-button {
+        padding: 10px 20px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: large;
+        width: 20%;
+        @extend .mi-boton;
+        @include mobile {
+            width: 30%;
+            font-size: medium;
+        }
+      }
+
+  .titulo-index{
+    grid-area: bienvenido;
+    margin-top: 585px;
+    
+    h2 {
+      font-size: 48px;
+      color: $color-h2;
+      text-align: center;
+      span{
+        color: $color-resaltado;
+        font-weight: bold;
+      }
+    }
+    h3{
+      font-size: 20px;
+      text-align: center;
+      margin: 0 15%;
+      @include mobile {
+        margin: 0 5%;
+        font-size: medium;
+    }
+    @include tablet {
+      margin: 0 2%;
+    }
+    }
+  }
+
+  .contenedor-clases{
+    grid-area: clases;
+    margin-bottom: 5%;
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      
+    }
+   
+    }
+      .div-clases{ 
+        @include tablet {
+        width: 100%;
+        margin-right: 7%;
+      }
+        
+          .card {
+            margin: 5%;
+            @extend .animacion-seleccion;
+            @extend .sombra;
+            
+                      
+            .card-img-top {
+                width: 20%;
+                margin: 2% auto 2% auto;
+            }
+            .card-body{
+              height: 16rem;
+              @include mobile {
+                height: 14rem;
+            }
+            @include tablet {
+              height: 10rem;
+            }
+          
+            }
+
+            .card-title{
+              color: $color-clases;
+              font-weight: bold;
+              text-align: center;
+            }
+
+            .card-text{
+              text-align: left;
+            }
+
+            .card-footer{
+              display: flex;
+              justify-content: center;
+            }
+
+            .hr-text{
+              width: 100%;
+              border: none;
+              border-top: 2px solid rgb(0, 0, 0);
+            }
+
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+        
+}
+  
+
+  .contenedor-contratacion {
+    grid-area: contratar;
+    background-color: $color-background-contratar;
+    padding: 0.5%;
+    margin: 0 2% 0 1%;
+    @include mobile {
+      margin: 3% 0;
+  }
+
+  @include tablet {
+    margin-top: 3%;
+  }
+
+    h2 {
+      font-size: 300%;
+      color: $color-h2-contenedores;
+      text-align: center;
+    }
+    p{
+      text-align: center;
+      font-size: 110%;
+    }
+    span{
+      color: $color-h2;
+      font-weight: bold;
+    }
+  }
+
+    .contenedor-contratacion-paso-uno {
+        grid-area: paso-uno;
+        display: flex;
+        justify-content: center;
+        margin: 0% 5%;
+        height: auto;
+        @include mobile {
+          margin: 0;
+      }
+      @include tablet {
+        margin: 0;
+      }
+
+  }
+
+    .contenedor-contratacion-paso-dos {
+        grid-area: paso-dos;
+        display: flex;
+        justify-content: center;
+        margin: 0% 5%;
+        height: auto;
+        @include mobile {
+          margin: 0;
+      }
+      @include tablet {
+        margin: 0;
+      }
+  }
+
+  .contenedor-contratacion-paso-tres {
+        grid-area: paso-tres;
+        display: flex;
+        justify-content: center;
+        margin: 0% 5%;
+        @include mobile {
+          margin: 0;
+      }
+      @include tablet {
+        margin: 0;
+      }
+     
+  }
+
+
+  .card-body-pasos {
+    height: 50px;
+  }
+
+  .contenedor-elegir {
+        grid-area: elegir;
+        background-color: $color-background-contratar;
+        padding: 0.5%;
+        margin: 0 2% 0 2%;
+        @include mobile {
+          margin: 3% 0;
+      }
+
+    h2 {
+        font-size: 300%;
+        color: $color-h2-contenedores;
+        text-align: center;
+    }
+    p{
+        text-align: center;
+        font-size: 110%;
+    }
+  }
+
+  .card.mb-3 {
+    border: none;
+    margin: 2%;
+    @include tablet {
+      width: 90%;
+      margin: 0 2%;
+    }
+    .row.g-0{
+      display: flex;
+      justify-content: center;
+    }
+    .col-md-4{
+      width: 25%;
+      display: flex;
+      align-items: center;
+      justify-content: center;      
+    }
+  }
+  .contenedor-elegir-dos {
+        grid-area: cualidad-uno;
+        @include mobile {
+          text-align: center;
+      }
+      @include tablet {
+        margin: 0 3%;
+      }
+        
+  }
+
+  .contenedor-elegir-tres {
+    grid-area: cualidad-dos;
+    @include mobile {
+      text-align: center;
+    }
+    @include tablet {
+      margin: 0 1%;
+    }
+  }
+
+  .contenedor-elegir-cuatro {
+    grid-area: cualidad-tres;
+    @include mobile {
+      text-align: center;
+    }
+    @include tablet {
+      margin: 0 1%;
+    }
+  }
+
+  .contenedor-elegir-cinco {
+    grid-area: cualidad-cuatro;
+    @include mobile {
+      text-align: center;
+    }
+    @include tablet {
+      margin: 0 1%;
+    }
+  }
+
+  .contenedor-elegir-seis {
+    grid-area: cualidad-cinco;
+    @include mobile {
+      text-align: center;
+    }
+    @include tablet {
+      margin: 0 1%;
+    }
+  }
+ 
+  .contenedor-elegir-siete {
+    grid-area: cualidad-seis;
+    @include mobile {
+      text-align: center;
+    }
+    @include tablet {
+      margin: 0 1%;
+    }
+  }
+
+
+
+footer {
+
+    a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 55%;
+      height: 75%;
+      @include mobile {
+        width: 35%;
+        height: 55%;
+    }
+    }
+  }
+  
+  .span-footer{
+    color: $color-resaltado;
+    font-weight: bold;
+   }
+   .columna-dos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mobile {
+      font-size: large;
+  }
+  }
+}
+
+
+/* Boton flotante  WhatsApp */
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #25d366;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  line-height: 60px;
+  z-index: 9999;
+}
+
+.whatsapp-btn:hover {
+  background-color: $color-background-whatsapp-hover;
+}

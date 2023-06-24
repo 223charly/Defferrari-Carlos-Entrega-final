@@ -1,0 +1,1219 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.sombra-texto, .grid-container h1, .grid-container h4, .sucursales-grid h1, .sucursales-grid h4, .informacion-grid h1, .informacion-grid h4, .contacto-grid h1, .contacto-grid h4, .grid-curso h1, .grid-curso h4 {
+  text-shadow: 2px 2px 5px black; }
+
+.sombra, .grid-container .background-image, .grid-container .div-clases .card, .sucursales-grid .sucursales-fondo, .sucursales-grid .card-zonas, .informacion-grid .informacion-fondo, .informacion-grid .contenedor-informacion-tramite img, .informacion-grid .contenedor-informacion-material img, .informacion-grid .contenedor-informacion-lugares img, .contacto-grid .contacto-fondo, .grid-curso .curso-fondo, .grid-curso .card-clases-personalizado {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); }
+
+.animacion-seleccion, .grid-container .content, .grid-container .div-clases .card, .sucursales-grid .card-zonas .btn-success, .informacion-grid .contenedor-informacion-tramite img, .informacion-grid .contenedor-informacion-material img, .informacion-grid .contenedor-informacion-lugares img, .grid-curso .card-clases-personalizado {
+  transition: transform 0.3s ease; }
+  .animacion-seleccion:hover, .grid-container .content:hover, .grid-container .div-clases .card:hover, .sucursales-grid .card-zonas .btn-success:hover, .informacion-grid .contenedor-informacion-tramite img:hover, .informacion-grid .contenedor-informacion-material img:hover, .informacion-grid .contenedor-informacion-lugares img:hover, .grid-curso .card-clases-personalizado:hover {
+    transform: scale(1.1); }
+
+.fade-up, .sucursales-grid .content-sucursales, .informacion-grid .content-informacion, .contacto-grid .content-contacto, .grid-curso .content-curso {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpAnimation 3s ease-in-out forwards; }
+
+@keyframes fadeUpAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.mi-boton:hover, .grid-container .contact-button:hover, .sucursales-grid .contact-button-sucursales:hover, .informacion-grid .contact-button-sucursales:hover, .contacto-grid .contact-button-sucursales:hover, .grid-curso .contact-button-curso:hover, .grid-curso .btn-primary:hover {
+  background-color: #034205;
+  color: #ffc107;
+  border-color: #000000; }
+
+.mi-boton-wp:hover, .sucursales-grid .card-zonas .btn-success:hover {
+  background-color: #28a745;
+  color: #ffc107;
+  border-color: #000000; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+nav .container-fluid {
+  display: flex;
+  justify-content: center; }
+
+nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; }
+
+nav img {
+  width: 10%; }
+
+nav .logo-cel {
+  width: 5%; }
+  @media (max-width: 768px) {
+    nav .logo-cel {
+      margin-left: 9%;
+      width: 10%; } }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-auto-flow: dense;
+  grid-template-areas: "banner banner banner" "bienvenido bienvenido bienvenido" "clases clases clases" "contratar contratar contratar" "paso-uno paso-dos paso-tres" "elegir elegir elegir" "cualidad-uno cualidad-dos cualidad-tres" "cualidad-cuatro cualidad-cinco cualidad-seis"; }
+  @media (max-width: 768px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "banner banner" "bienvenido bienvenido" "clases clases" "contratar contratar" "paso-uno paso-uno" "paso-dos paso-dos" "paso-tres paso-tres" "elegir elegir" "cualidad-uno cualidad-dos"  "cualidad-tres cualidad-cuatro" "cualidad-cinco cualidad-seis"; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-auto-flow: dense;
+      grid-template-areas: "banner banner" "bienvenido bienvenido" "clases clases" "contratar contratar" "paso-uno paso-uno" "paso-dos paso-dos" "paso-tres paso-tres" "elegir elegir" "cualidad-uno cualidad-dos"  "cualidad-tres cualidad-cuatro" "cualidad-cinco cualidad-seis"; } }
+  .grid-container .container {
+    position: relative;
+    height: 200px; }
+  .grid-container .background-image {
+    grid-area: banner;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background-image: url(../images/vista-cerca-estudiante-conduciendo-automovil-e-instructor-lista-verificacion.jpg);
+    background-position: center 35%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9; }
+    @media (max-width: 768px) {
+      .grid-container .background-image {
+        height: 60%; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .grid-container .background-image {
+        height: 61%; } }
+  .grid-container .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    padding: 20px;
+    margin-top: 350px; }
+    @media (max-width: 768px) {
+      .grid-container .content {
+        margin-top: 65%; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .grid-container .content {
+        margin-top: 45%; } }
+  .grid-container h1, .grid-container h4 {
+    color: #fdfdfd; }
+  .grid-container hr {
+    width: 20%;
+    border: none;
+    border-top: 2px solid black;
+    margin: 10px 0; }
+  .grid-container .contact-button {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    width: 20%; }
+    @media (max-width: 768px) {
+      .grid-container .contact-button {
+        width: 30%;
+        font-size: medium; } }
+  .grid-container .titulo-index {
+    grid-area: bienvenido;
+    margin-top: 585px; }
+    .grid-container .titulo-index h2 {
+      font-size: 48px;
+      color: black;
+      text-align: center; }
+      .grid-container .titulo-index h2 span {
+        color: red;
+        font-weight: bold; }
+    .grid-container .titulo-index h3 {
+      font-size: 20px;
+      text-align: center;
+      margin: 0 15%; }
+      @media (max-width: 768px) {
+        .grid-container .titulo-index h3 {
+          margin: 0 5%;
+          font-size: medium; } }
+      @media (min-width: 768px) and (max-width: 992px) {
+        .grid-container .titulo-index h3 {
+          margin: 0 2%; } }
+  .grid-container .contenedor-clases {
+    grid-area: clases;
+    margin-bottom: 5%; }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .grid-container .contenedor-clases {
+        display: flex;
+        flex-wrap: wrap; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .grid-container .div-clases {
+      width: 100%;
+      margin-right: 7%; } }
+  .grid-container .div-clases .card {
+    margin: 5%; }
+    .grid-container .div-clases .card .card-img-top {
+      width: 20%;
+      margin: 2% auto 2% auto; }
+    .grid-container .div-clases .card .card-body {
+      height: 16rem; }
+      @media (max-width: 768px) {
+        .grid-container .div-clases .card .card-body {
+          height: 14rem; } }
+      @media (min-width: 768px) and (max-width: 992px) {
+        .grid-container .div-clases .card .card-body {
+          height: 10rem; } }
+    .grid-container .div-clases .card .card-title {
+      color: #ffc107;
+      font-weight: bold;
+      text-align: center; }
+    .grid-container .div-clases .card .card-text {
+      text-align: left; }
+    .grid-container .div-clases .card .card-footer {
+      display: flex;
+      justify-content: center; }
+    .grid-container .div-clases .card .hr-text {
+      width: 100%;
+      border: none;
+      border-top: 2px solid black; }
+    .grid-container .div-clases .card ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+
+.contenedor-contratacion {
+  grid-area: contratar;
+  background-color: #668284;
+  padding: 0.5%;
+  margin: 0 2% 0 1%; }
+  @media (max-width: 768px) {
+    .contenedor-contratacion {
+      margin: 3% 0; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .contenedor-contratacion {
+      margin-top: 3%; } }
+  .contenedor-contratacion h2 {
+    font-size: 300%;
+    color: whitesmoke;
+    text-align: center; }
+  .contenedor-contratacion p {
+    text-align: center;
+    font-size: 110%; }
+  .contenedor-contratacion span {
+    color: black;
+    font-weight: bold; }
+
+.contenedor-contratacion-paso-uno {
+  grid-area: paso-uno;
+  display: flex;
+  justify-content: center;
+  margin: 0% 5%;
+  height: auto; }
+  @media (max-width: 768px) {
+    .contenedor-contratacion-paso-uno {
+      margin: 0; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .contenedor-contratacion-paso-uno {
+      margin: 0; } }
+
+.contenedor-contratacion-paso-dos {
+  grid-area: paso-dos;
+  display: flex;
+  justify-content: center;
+  margin: 0% 5%;
+  height: auto; }
+  @media (max-width: 768px) {
+    .contenedor-contratacion-paso-dos {
+      margin: 0; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .contenedor-contratacion-paso-dos {
+      margin: 0; } }
+
+.contenedor-contratacion-paso-tres {
+  grid-area: paso-tres;
+  display: flex;
+  justify-content: center;
+  margin: 0% 5%; }
+  @media (max-width: 768px) {
+    .contenedor-contratacion-paso-tres {
+      margin: 0; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .contenedor-contratacion-paso-tres {
+      margin: 0; } }
+
+.card-body-pasos {
+  height: 50px; }
+
+.contenedor-elegir {
+  grid-area: elegir;
+  background-color: #668284;
+  padding: 0.5%;
+  margin: 0 2% 0 2%; }
+  @media (max-width: 768px) {
+    .contenedor-elegir {
+      margin: 3% 0; } }
+  .contenedor-elegir h2 {
+    font-size: 300%;
+    color: whitesmoke;
+    text-align: center; }
+  .contenedor-elegir p {
+    text-align: center;
+    font-size: 110%; }
+
+.card.mb-3 {
+  border: none;
+  margin: 2%; }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .card.mb-3 {
+      width: 90%;
+      margin: 0 2%; } }
+  .card.mb-3 .row.g-0 {
+    display: flex;
+    justify-content: center; }
+  .card.mb-3 .col-md-4 {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
+.contenedor-elegir-dos {
+  grid-area: cualidad-uno; }
+  @media (max-width: 768px) {
+    .contenedor-elegir-dos {
+      text-align: center; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .contenedor-elegir-dos {
+      margin: 0 3%; } }
+
+.contenedor-elegir-tres {
+  grid-area: cualidad-dos; }
+  @media (max-width: 768px) {
+    .contenedor-elegir-tres {
+      text-align: center; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .contenedor-elegir-tres {
+      margin: 0 1%; } }
+
+.contenedor-elegir-cuatro {
+  grid-area: cualidad-tres; }
+  @media (max-width: 768px) {
+    .contenedor-elegir-cuatro {
+      text-align: center; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .contenedor-elegir-cuatro {
+      margin: 0 1%; } }
+
+.contenedor-elegir-cinco {
+  grid-area: cualidad-cuatro; }
+  @media (max-width: 768px) {
+    .contenedor-elegir-cinco {
+      text-align: center; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .contenedor-elegir-cinco {
+      margin: 0 1%; } }
+
+.contenedor-elegir-seis {
+  grid-area: cualidad-cinco; }
+  @media (max-width: 768px) {
+    .contenedor-elegir-seis {
+      text-align: center; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .contenedor-elegir-seis {
+      margin: 0 1%; } }
+
+.contenedor-elegir-siete {
+  grid-area: cualidad-seis; }
+  @media (max-width: 768px) {
+    .contenedor-elegir-siete {
+      text-align: center; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .contenedor-elegir-siete {
+      margin: 0 1%; } }
+
+footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  footer a img {
+    width: 55%;
+    height: 75%; }
+    @media (max-width: 768px) {
+      footer a img {
+        width: 35%;
+        height: 55%; } }
+
+footer .span-footer {
+  color: red;
+  font-weight: bold; }
+
+footer .columna-dos {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media (max-width: 768px) {
+    footer .columna-dos {
+      font-size: large; } }
+
+/* Boton flotante  WhatsApp */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #25d366;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  line-height: 60px;
+  z-index: 9999; }
+
+.whatsapp-btn:hover {
+  background-color: #128c7e; }
+
+.sombra-texto, .grid-container h1, .grid-container h4, .sucursales-grid h1, .sucursales-grid h4, .informacion-grid h1, .informacion-grid h4, .contacto-grid h1, .contacto-grid h4, .grid-curso h1, .grid-curso h4 {
+  text-shadow: 2px 2px 5px black; }
+
+.sombra, .grid-container .background-image, .grid-container .div-clases .card, .sucursales-grid .sucursales-fondo, .sucursales-grid .card-zonas, .informacion-grid .informacion-fondo, .informacion-grid .contenedor-informacion-tramite img, .informacion-grid .contenedor-informacion-material img, .informacion-grid .contenedor-informacion-lugares img, .contacto-grid .contacto-fondo, .grid-curso .curso-fondo, .grid-curso .card-clases-personalizado {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); }
+
+.animacion-seleccion, .grid-container .content, .grid-container .div-clases .card, .sucursales-grid .card-zonas .btn-success, .informacion-grid .contenedor-informacion-tramite img, .informacion-grid .contenedor-informacion-material img, .informacion-grid .contenedor-informacion-lugares img, .grid-curso .card-clases-personalizado {
+  transition: transform 0.3s ease; }
+  .animacion-seleccion:hover, .grid-container .content:hover, .grid-container .div-clases .card:hover, .sucursales-grid .card-zonas .btn-success:hover, .informacion-grid .contenedor-informacion-tramite img:hover, .informacion-grid .contenedor-informacion-material img:hover, .informacion-grid .contenedor-informacion-lugares img:hover, .grid-curso .card-clases-personalizado:hover {
+    transform: scale(1.1); }
+
+.fade-up, .sucursales-grid .content-sucursales, .informacion-grid .content-informacion, .contacto-grid .content-contacto, .grid-curso .content-curso {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpAnimation 3s ease-in-out forwards; }
+
+@keyframes fadeUpAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.mi-boton:hover, .grid-container .contact-button:hover, .sucursales-grid .contact-button-sucursales:hover, .informacion-grid .contact-button-sucursales:hover, .contacto-grid .contact-button-sucursales:hover, .grid-curso .contact-button-curso:hover, .grid-curso .btn-primary:hover {
+  background-color: #034205;
+  color: #ffc107;
+  border-color: #000000; }
+
+.mi-boton-wp:hover, .sucursales-grid .card-zonas .btn-success:hover {
+  background-color: #28a745;
+  color: #ffc107;
+  border-color: #000000; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+nav .container-fluid {
+  display: flex;
+  justify-content: center; }
+
+nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; }
+
+nav img {
+  width: 10%; }
+
+nav .logo-cel {
+  width: 5%; }
+  @media (max-width: 768px) {
+    nav .logo-cel {
+      margin-left: 9%;
+      width: 10%; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    nav .logo-cel {
+      margin-left: 9%;
+      width: 10%; } }
+
+.sucursales-grid {
+  margin-top: 30%;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-areas: "banner-sucursales banner-sucursales banner-sucursales" "titulo-sucursales titulo-sucursales titulo-sucursales" "zona-uno zona-dos zona-tres"; }
+  @media (max-width: 768px) {
+    .sucursales-grid {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "banner-sucursales banner-sucursales" "titulo-sucursales titulo-sucursales" "zona-uno zona-uno" "zona-dos zona-dos" "zona-tres zona-tres"; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .sucursales-grid {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "banner-sucursales banner-sucursales" "titulo-sucursales titulo-sucursales" "zona-uno zona-uno" "zona-dos zona-dos" "zona-tres zona-tres"; } }
+  .sucursales-grid .contenedor-sucursales {
+    position: relative;
+    height: 220px; }
+  .sucursales-grid .sucursales-fondo {
+    grid-area: banner-sucursales;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background-image: url(../images/sucursalefondo.jpg);
+    background-position: center 5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8; }
+    @media (max-width: 768px) {
+      .sucursales-grid .sucursales-fondo {
+        height: 60%; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .sucursales-grid .sucursales-fondo {
+        height: 60%; } }
+  .sucursales-grid .content-sucursales {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    margin-top: 350px;
+    margin-left: 80px; }
+    @media (max-width: 768px) {
+      .sucursales-grid .content-sucursales {
+        margin-top: 58%;
+        margin-left: 0;
+        text-align: center; } }
+  .sucursales-grid h1, .sucursales-grid h4 {
+    color: #fdfdfd; }
+  .sucursales-grid hr {
+    width: 20%;
+    border: none;
+    border-top: 2px solid black;
+    margin: 10px 0; }
+    @media (max-width: 768px) {
+      .sucursales-grid hr {
+        border-top: transparent; } }
+  .sucursales-grid .contact-button-sucursales {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    width: 20%; }
+    @media (max-width: 768px) {
+      .sucursales-grid .contact-button-sucursales {
+        width: 30%; } }
+  .sucursales-grid .titulo-sucursales {
+    grid-area: titulo-sucursales;
+    margin-top: 9%; }
+    @media (max-width: 768px) {
+      .sucursales-grid .titulo-sucursales {
+        margin-top: 65%;
+        margin-bottom: 2%; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .sucursales-grid .titulo-sucursales {
+        margin-top: 40%; } }
+    .sucursales-grid .titulo-sucursales h2 {
+      font-size: 48px;
+      color: black;
+      text-align: center; }
+      .sucursales-grid .titulo-sucursales h2 span {
+        color: red;
+        font-weight: bold; }
+    .sucursales-grid .titulo-sucursales h3 {
+      font-size: 20px;
+      text-align: center;
+      margin: 0 12%; }
+      @media (max-width: 768px) {
+        .sucursales-grid .titulo-sucursales h3 {
+          margin: 0 5%;
+          font-size: medium; } }
+  .sucursales-grid .contenedor-zona-uno {
+    grid-area: zona-uno;
+    display: flex;
+    margin: 5% 3%;
+    justify-content: center; }
+    @media (max-width: 768px) {
+      .sucursales-grid .contenedor-zona-uno {
+        margin: 3%; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .sucursales-grid .contenedor-zona-uno {
+        margin: 2%; } }
+  .sucursales-grid .contenedor-zona-dos {
+    grid-area: zona-dos;
+    display: flex;
+    margin: 5% 3%; }
+    @media (max-width: 768px) {
+      .sucursales-grid .contenedor-zona-dos {
+        margin: 3%; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .sucursales-grid .contenedor-zona-dos {
+        margin: 2%; } }
+  .sucursales-grid .contenedor-zona-tres {
+    grid-area: zona-tres;
+    display: flex;
+    margin: 5% 3%; }
+    @media (max-width: 768px) {
+      .sucursales-grid .contenedor-zona-tres {
+        margin: 3%; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .sucursales-grid .contenedor-zona-tres {
+        margin: 2%; } }
+  .sucursales-grid .mapa-zonas {
+    object-fit: contain; }
+  .sucursales-grid .card-zonas {
+    text-align: center;
+    width: 100%; }
+    .sucursales-grid .card-zonas ul {
+      text-align: left; }
+    .sucursales-grid .card-zonas .card-title {
+      color: #ffc107;
+      font-weight: bold; }
+      @media (min-width: 768px) and (max-width: 992px) {
+        .sucursales-grid .card-zonas .card-title {
+          font-size: x-large; } }
+    .sucursales-grid .card-zonas .btn-success {
+      background-color: #008000; }
+      @media (max-width: 768px) {
+        .sucursales-grid .card-zonas .btn-success {
+          font-size: larger; } }
+
+.sombra-texto, .grid-container h1, .grid-container h4, .sucursales-grid h1, .sucursales-grid h4, .informacion-grid h1, .informacion-grid h4, .contacto-grid h1, .contacto-grid h4, .grid-curso h1, .grid-curso h4 {
+  text-shadow: 2px 2px 5px black; }
+
+.sombra, .grid-container .background-image, .grid-container .div-clases .card, .sucursales-grid .sucursales-fondo, .sucursales-grid .card-zonas, .informacion-grid .informacion-fondo, .informacion-grid .contenedor-informacion-tramite img, .informacion-grid .contenedor-informacion-material img, .informacion-grid .contenedor-informacion-lugares img, .contacto-grid .contacto-fondo, .grid-curso .curso-fondo, .grid-curso .card-clases-personalizado {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); }
+
+.animacion-seleccion, .grid-container .content, .grid-container .div-clases .card, .sucursales-grid .card-zonas .btn-success, .informacion-grid .contenedor-informacion-tramite img, .informacion-grid .contenedor-informacion-material img, .informacion-grid .contenedor-informacion-lugares img, .grid-curso .card-clases-personalizado {
+  transition: transform 0.3s ease; }
+  .animacion-seleccion:hover, .grid-container .content:hover, .grid-container .div-clases .card:hover, .sucursales-grid .card-zonas .btn-success:hover, .informacion-grid .contenedor-informacion-tramite img:hover, .informacion-grid .contenedor-informacion-material img:hover, .informacion-grid .contenedor-informacion-lugares img:hover, .grid-curso .card-clases-personalizado:hover {
+    transform: scale(1.1); }
+
+.fade-up, .sucursales-grid .content-sucursales, .informacion-grid .content-informacion, .contacto-grid .content-contacto, .grid-curso .content-curso {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpAnimation 3s ease-in-out forwards; }
+
+@keyframes fadeUpAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.mi-boton:hover, .grid-container .contact-button:hover, .sucursales-grid .contact-button-sucursales:hover, .informacion-grid .contact-button-sucursales:hover, .contacto-grid .contact-button-sucursales:hover, .grid-curso .contact-button-curso:hover, .grid-curso .btn-primary:hover {
+  background-color: #034205;
+  color: #ffc107;
+  border-color: #000000; }
+
+.mi-boton-wp:hover, .sucursales-grid .card-zonas .btn-success:hover {
+  background-color: #28a745;
+  color: #ffc107;
+  border-color: #000000; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+nav .container-fluid {
+  display: flex;
+  justify-content: center; }
+
+nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; }
+
+nav img {
+  width: 10%; }
+
+nav .logo-cel {
+  width: 5%; }
+  @media (max-width: 768px) {
+    nav .logo-cel {
+      margin-left: 9%;
+      width: 10%; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    nav .logo-cel {
+      margin-left: 9%;
+      width: 10%; } }
+
+.informacion-grid {
+  margin-top: 30%;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-areas: "banner-informacion banner-informacion banner-informacion" "titulo-informacion titulo-informacion titulo-informacion" "tramite material lugares"; }
+  @media (max-width: 768px) {
+    .informacion-grid {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-areas: "banner-informacion" "titulo-informacion" "tramite" "material" "lugares"; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .informacion-grid {
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      grid-template-areas: "banner-informacion banner-informacion banner-informacion" "titulo-informacion titulo-informacion titulo-informacion" "tramite material lugares"; } }
+  .informacion-grid .contenedor-informacion {
+    position: relative;
+    height: 220px; }
+  .informacion-grid .informacion-fondo {
+    grid-area: banner-informacion;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background-image: url(../images/informacion.png);
+    background-position: center 5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8; }
+    @media (max-width: 768px) {
+      .informacion-grid .informacion-fondo {
+        height: 55%; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .informacion-grid .informacion-fondo {
+        height: 55%; } }
+  .informacion-grid .content-informacion {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    margin-top: 350px;
+    margin-left: 80px; }
+    @media (max-width: 768px) {
+      .informacion-grid .content-informacion {
+        margin-top: 43%;
+        margin-left: 0;
+        text-align: center;
+        width: 90%; } }
+  .informacion-grid h1, .informacion-grid h4 {
+    color: #fdfdfd; }
+  .informacion-grid hr {
+    width: 20%;
+    border: none;
+    border-top: 2px solid black;
+    margin: 10px 0; }
+    @media (max-width: 768px) {
+      .informacion-grid hr {
+        border-top: transparent; } }
+  .informacion-grid .contact-button-sucursales {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    width: 20%; }
+    @media (max-width: 768px) {
+      .informacion-grid .contact-button-sucursales {
+        width: 30%; } }
+  .informacion-grid .titulo-informacion {
+    grid-area: titulo-informacion;
+    margin-top: 9%; }
+    @media (max-width: 768px) {
+      .informacion-grid .titulo-informacion {
+        margin-top: 48%;
+        margin-bottom: 2%; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .informacion-grid .titulo-informacion {
+        margin-top: 30%; } }
+    .informacion-grid .titulo-informacion h2 {
+      font-size: 48px;
+      color: black;
+      text-align: center; }
+      .informacion-grid .titulo-informacion h2 span {
+        color: red;
+        font-weight: bold; }
+    .informacion-grid .titulo-informacion h3 {
+      font-size: 20px;
+      text-align: center;
+      margin: 0 12%; }
+      @media (max-width: 768px) {
+        .informacion-grid .titulo-informacion h3 {
+          margin: 0 5%;
+          font-size: large; } }
+  .informacion-grid .contenedor-informacion-tramite {
+    grid-area: tramite;
+    display: flex;
+    justify-content: center;
+    margin: 2% 0; }
+    .informacion-grid .contenedor-informacion-tramite img {
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      border: 10px solid black;
+      margin: 10px; }
+  .informacion-grid .contenedor-informacion-material {
+    grid-area: material;
+    display: flex;
+    justify-content: center;
+    margin: 2% 0; }
+    .informacion-grid .contenedor-informacion-material img {
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      border: 10px solid black;
+      margin: 10px; }
+  .informacion-grid .contenedor-informacion-lugares {
+    grid-area: lugares;
+    display: flex;
+    justify-content: center;
+    margin: 2% 0; }
+    .informacion-grid .contenedor-informacion-lugares img {
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      border: 10px solid black;
+      margin: 10px; }
+
+.sombra-texto, .grid-container h1, .grid-container h4, .sucursales-grid h1, .sucursales-grid h4, .informacion-grid h1, .informacion-grid h4, .contacto-grid h1, .contacto-grid h4, .grid-curso h1, .grid-curso h4 {
+  text-shadow: 2px 2px 5px black; }
+
+.sombra, .grid-container .background-image, .grid-container .div-clases .card, .sucursales-grid .sucursales-fondo, .sucursales-grid .card-zonas, .informacion-grid .informacion-fondo, .informacion-grid .contenedor-informacion-tramite img, .informacion-grid .contenedor-informacion-material img, .informacion-grid .contenedor-informacion-lugares img, .contacto-grid .contacto-fondo, .grid-curso .curso-fondo, .grid-curso .card-clases-personalizado {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); }
+
+.animacion-seleccion, .grid-container .content, .grid-container .div-clases .card, .sucursales-grid .card-zonas .btn-success, .informacion-grid .contenedor-informacion-tramite img, .informacion-grid .contenedor-informacion-material img, .informacion-grid .contenedor-informacion-lugares img, .grid-curso .card-clases-personalizado {
+  transition: transform 0.3s ease; }
+  .animacion-seleccion:hover, .grid-container .content:hover, .grid-container .div-clases .card:hover, .sucursales-grid .card-zonas .btn-success:hover, .informacion-grid .contenedor-informacion-tramite img:hover, .informacion-grid .contenedor-informacion-material img:hover, .informacion-grid .contenedor-informacion-lugares img:hover, .grid-curso .card-clases-personalizado:hover {
+    transform: scale(1.1); }
+
+.fade-up, .sucursales-grid .content-sucursales, .informacion-grid .content-informacion, .contacto-grid .content-contacto, .grid-curso .content-curso {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpAnimation 3s ease-in-out forwards; }
+
+@keyframes fadeUpAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.mi-boton:hover, .grid-container .contact-button:hover, .sucursales-grid .contact-button-sucursales:hover, .informacion-grid .contact-button-sucursales:hover, .contacto-grid .contact-button-sucursales:hover, .grid-curso .contact-button-curso:hover, .grid-curso .btn-primary:hover {
+  background-color: #034205;
+  color: #ffc107;
+  border-color: #000000; }
+
+.mi-boton-wp:hover, .sucursales-grid .card-zonas .btn-success:hover {
+  background-color: #28a745;
+  color: #ffc107;
+  border-color: #000000; }
+
+.contacto-grid {
+  margin-top: 30%;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-areas: "banner-contacto banner-contacto banner-contacto" "titulo-contacto titulo-contacto titulo-contacto" "redes-contacto formulario-contacto formulario-contacto"; }
+  @media (max-width: 768px) {
+    .contacto-grid {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-areas: "banner-contacto" "titulo-contacto" "formulario-contacto" "redes-contacto"; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .contacto-grid {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "banner-contacto banner-contacto" "titulo-contacto titulo-contacto" "redes-contacto formulario-contacto"; } }
+  .contacto-grid .contenedor-contacto {
+    position: relative;
+    height: 220px; }
+  .contacto-grid .contacto-fondo {
+    grid-area: banner-contacto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background-image: url(../images/contactofondo.png);
+    background-position: center 15%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8; }
+    @media (max-width: 768px) {
+      .contacto-grid .contacto-fondo {
+        height: 55%; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .contacto-grid .contacto-fondo {
+        height: 60%; } }
+  .contacto-grid .content-contacto {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    margin-top: 350px;
+    margin-left: 80px; }
+    @media (max-width: 768px) {
+      .contacto-grid .content-contacto {
+        margin-top: 45%;
+        margin-left: 0;
+        text-align: center;
+        width: 100%; } }
+  .contacto-grid h1, .contacto-grid h4 {
+    color: #fdfdfd; }
+  .contacto-grid hr {
+    width: 20%;
+    border: none;
+    border-top: 2px solid black;
+    margin: 10px 0; }
+    @media (max-width: 768px) {
+      .contacto-grid hr {
+        border-top: transparent; } }
+  .contacto-grid .contact-button-sucursales {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    width: 20%; }
+    @media (max-width: 768px) {
+      .contacto-grid .contact-button-sucursales {
+        width: 30%; } }
+  .contacto-grid .titulo-contacto {
+    grid-area: titulo-contacto;
+    margin-top: 9%; }
+    @media (max-width: 768px) {
+      .contacto-grid .titulo-contacto {
+        margin-top: 50%;
+        margin-bottom: 2%; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .contacto-grid .titulo-contacto {
+        margin-top: 40%; } }
+    .contacto-grid .titulo-contacto h2 {
+      font-size: 48px;
+      color: black;
+      text-align: center; }
+      .contacto-grid .titulo-contacto h2 span {
+        color: red;
+        font-weight: bold; }
+    .contacto-grid .titulo-contacto h3 {
+      font-size: 20px;
+      text-align: center;
+      margin: 0 12%; }
+      @media (max-width: 768px) {
+        .contacto-grid .titulo-contacto h3 {
+          margin: 0 5%;
+          font-size: large; } }
+  .contacto-grid .formulario-contacto {
+    grid-area: formulario-contacto;
+    width: 75%;
+    margin: 5% 3%; }
+    @media (max-width: 768px) {
+      .contacto-grid .formulario-contacto {
+        margin: 0;
+        width: 90%;
+        justify-self: center; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .contacto-grid .formulario-contacto {
+        justify-self: center;
+        margin: 3% 0;
+        width: 95%; } }
+    .contacto-grid .formulario-contacto .btn-contacto {
+      margin: 3%; }
+      @media (max-width: 768px) {
+        .contacto-grid .formulario-contacto .btn-contacto {
+          margin-top: 5%; } }
+      @media (min-width: 768px) and (max-width: 992px) {
+        .contacto-grid .formulario-contacto .btn-contacto {
+          margin-top: 5%; } }
+  .contacto-grid .preguntas {
+    height: 85%; }
+  .contacto-grid .redes-contacto {
+    grid-area: redes-contacto;
+    margin: 5%;
+    display: flex; }
+    @media (max-width: 768px) {
+      .contacto-grid .redes-contacto {
+        margin: 3% 0; } }
+    .contacto-grid .redes-contacto .redes {
+      flex-direction: column;
+      align-items: center; }
+      @media (max-width: 768px) {
+        .contacto-grid .redes-contacto .redes {
+          flex-direction: row; } }
+      @media (min-width: 768px) and (max-width: 992px) {
+        .contacto-grid .redes-contacto .redes {
+          flex-direction: row; } }
+      .contacto-grid .redes-contacto .redes .card {
+        margin: 2%; }
+        .contacto-grid .redes-contacto .redes .card .card-body {
+          text-align: center; }
+          @media (max-width: 768px) {
+            .contacto-grid .redes-contacto .redes .card .card-body {
+              height: 185px;
+              text-align: center; } }
+          @media (min-width: 768px) and (max-width: 992px) {
+            .contacto-grid .redes-contacto .redes .card .card-body {
+              height: 240px;
+              text-align: center; } }
+        .contacto-grid .redes-contacto .redes .card h5 {
+          color: #ffc107;
+          text-align: center; }
+        .contacto-grid .redes-contacto .redes .card .redes-sociales {
+          display: flex;
+          justify-content: center; }
+        .contacto-grid .redes-contacto .redes .card .logo-facebook {
+          display: inline-block;
+          width: 55px;
+          height: 55px;
+          background-size: cover;
+          margin-right: 5%; }
+        .contacto-grid .redes-contacto .redes .card .logo-instagram {
+          display: inline-block;
+          width: 50px;
+          height: 55px;
+          background-size: cover;
+          margin-right: 5%; }
+        .contacto-grid .redes-contacto .redes .card .logo-facebook {
+          background-image: url(../images/facebookcopia.svg); }
+        .contacto-grid .redes-contacto .redes .card .logo-instagram {
+          background-image: url(../images/instagramcopia.svg); }
+
+.sombra-texto, .grid-container h1, .grid-container h4, .sucursales-grid h1, .sucursales-grid h4, .informacion-grid h1, .informacion-grid h4, .contacto-grid h1, .contacto-grid h4, .grid-curso h1, .grid-curso h4 {
+  text-shadow: 2px 2px 5px black; }
+
+.sombra, .grid-container .background-image, .grid-container .div-clases .card, .sucursales-grid .sucursales-fondo, .sucursales-grid .card-zonas, .informacion-grid .informacion-fondo, .informacion-grid .contenedor-informacion-tramite img, .informacion-grid .contenedor-informacion-material img, .informacion-grid .contenedor-informacion-lugares img, .contacto-grid .contacto-fondo, .grid-curso .curso-fondo, .grid-curso .card-clases-personalizado {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); }
+
+.animacion-seleccion, .grid-container .content, .grid-container .div-clases .card, .sucursales-grid .card-zonas .btn-success, .informacion-grid .contenedor-informacion-tramite img, .informacion-grid .contenedor-informacion-material img, .informacion-grid .contenedor-informacion-lugares img, .grid-curso .card-clases-personalizado {
+  transition: transform 0.3s ease; }
+  .animacion-seleccion:hover, .grid-container .content:hover, .grid-container .div-clases .card:hover, .sucursales-grid .card-zonas .btn-success:hover, .informacion-grid .contenedor-informacion-tramite img:hover, .informacion-grid .contenedor-informacion-material img:hover, .informacion-grid .contenedor-informacion-lugares img:hover, .grid-curso .card-clases-personalizado:hover {
+    transform: scale(1.1); }
+
+.fade-up, .sucursales-grid .content-sucursales, .informacion-grid .content-informacion, .contacto-grid .content-contacto, .grid-curso .content-curso {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpAnimation 3s ease-in-out forwards; }
+
+@keyframes fadeUpAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.mi-boton:hover, .grid-container .contact-button:hover, .sucursales-grid .contact-button-sucursales:hover, .informacion-grid .contact-button-sucursales:hover, .contacto-grid .contact-button-sucursales:hover, .grid-curso .contact-button-curso:hover, .grid-curso .btn-primary:hover {
+  background-color: #034205;
+  color: #ffc107;
+  border-color: #000000; }
+
+.mi-boton-wp:hover, .sucursales-grid .card-zonas .btn-success:hover {
+  background-color: #28a745;
+  color: #ffc107;
+  border-color: #000000; }
+
+.grid-curso {
+  margin-top: 30%;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-areas: "curso-fondo curso-fondo curso-fondo" "foto-mobi ofrecer ofrecer" "clases clases clases" "clase-uno clase-dos clase-tres";
+  /* Estilos para dispositivos tablets */
+  /* Estilos para dispositivos tablets */ }
+  @media (max-width: 768px) {
+    .grid-curso {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-areas: "curso-fondo" "ofrecer" "clases" "clase-uno" "clase-dos"  "clase-tres"; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .grid-curso {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "curso-fondo curso-fondo" "ofrecer ofrecer" "clases clases" "clase-uno clase-uno" "clase-dos clase-dos" "clase-tres clase-tres"; } }
+  .grid-curso .contenedor-curso {
+    position: relative;
+    height: 220px;
+    height: 100%; }
+  .grid-curso .curso-fondo {
+    grid-area: curso-fondo;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background-image: url(../images/cursosfondo.jpg);
+    background-position: center 25%;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    @media (max-width: 768px) {
+      .grid-curso .curso-fondo {
+        height: 50%; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .grid-curso .curso-fondo {
+        height: 50%; } }
+  .grid-curso .content-curso {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    margin-top: 23%;
+    margin-left: 80px; }
+    @media (max-width: 768px) {
+      .grid-curso .content-curso {
+        margin-top: 43%;
+        margin-left: 0;
+        text-align: center;
+        width: 100%; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .grid-curso .content-curso {
+        margin-top: 33%;
+        margin-left: 0;
+        text-align: center;
+        width: 100%; } }
+  .grid-curso h1, .grid-curso h4 {
+    color: #fdfdfd; }
+  .grid-curso hr {
+    width: 20%;
+    border: none;
+    border-top: 2px solid black;
+    margin: 10px 0; }
+    @media (max-width: 768px) {
+      .grid-curso hr {
+        border-top: transparent; } }
+  .grid-curso .contact-button-curso {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    width: 20%; }
+    @media (max-width: 768px) {
+      .grid-curso .contact-button-curso {
+        width: 30%; } }
+  .grid-curso .contenedor-curso-uno {
+    grid-area: foto-mobi;
+    margin-top: 30%;
+    display: flex; }
+    .grid-curso .contenedor-curso-uno .auto {
+      filter: drop-shadow(0 0 20px black);
+      max-width: 100%;
+      height: auto;
+      justify-content: center; }
+  .grid-curso .auto-uno {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row; }
+  .grid-curso .contenedor-curso-dos {
+    grid-area: ofrecer;
+    display: flex;
+    flex-direction: column;
+    margin-top: 13%;
+    text-align: center;
+    margin-right: 25px; }
+    .grid-curso .contenedor-curso-dos h2 {
+      font-size: 48px;
+      color: black; }
+    .grid-curso .contenedor-curso-dos span {
+      color: red;
+      font-weight: bold; }
+    @media (max-width: 768px) {
+      .grid-curso .contenedor-curso-dos {
+        margin-top: 52%;
+        width: 95%; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .grid-curso .contenedor-curso-dos {
+        margin-top: 25%;
+        width: 90%; } }
+    @media (max-width: 768px) {
+      .grid-curso .contenedor-curso-dos .accordion {
+        width: 95%;
+        justify-content: center;
+        margin-left: 15px; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .grid-curso .contenedor-curso-dos .accordion {
+        justify-content: center; } }
+    .grid-curso .contenedor-curso-dos .accordion .accordion-item {
+      background-color: #838383; }
+      .grid-curso .contenedor-curso-dos .accordion .accordion-item .accordion-header .accordion-button {
+        background-color: #838383;
+        color: white; }
+        .grid-curso .contenedor-curso-dos .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+          background-color: #2c2c2c; }
+      .grid-curso .contenedor-curso-dos .accordion .accordion-item .accordion-collapse {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); }
+  .grid-curso .contenedor-curso-tres {
+    grid-area: clases; }
+    .grid-curso .contenedor-curso-tres h2 {
+      font-size: 36px;
+      color: black;
+      text-align: center;
+      margin: 10px; }
+    .grid-curso .contenedor-curso-tres p {
+      text-align: center;
+      color: black;
+      width: 90%;
+      text-align: center; }
+  .grid-curso .contenedor-curso-cuatro {
+    grid-area: clase-uno;
+    display: flex; }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .grid-curso .contenedor-curso-cuatro {
+        justify-content: center; } }
+  .grid-curso .contenedor-curso-cinco {
+    grid-area: clase-dos;
+    display: flex; }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .grid-curso .contenedor-curso-cinco {
+        justify-content: center; } }
+  .grid-curso .contenedor-curso-seis {
+    grid-area: clase-tres;
+    display: flex; }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .grid-curso .contenedor-curso-seis {
+        justify-content: center; } }
+    .grid-curso .contenedor-curso-seis h5 {
+      text-align: center; }
+  .grid-curso .card-clases-personalizado {
+    width: 28rem;
+    height: 18rem;
+    margin-top: 15px;
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: center;
+    text-align: center; }
+    @media (max-width: 768px) {
+      .grid-curso .card-clases-personalizado {
+        width: 90%;
+        margin-left: 15px; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .grid-curso .card-clases-personalizado {
+        margin: 1%; } }
+  .grid-curso .btn-primary {
+    background-color: black;
+    border-color: black;
+    color: black; }

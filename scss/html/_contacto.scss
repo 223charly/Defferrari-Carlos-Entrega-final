@@ -1,0 +1,246 @@
+// Links 
+
+@import "../utilidades/variables";
+@import "../utilidades/extends";
+@import "../utilidades/mixin";
+
+.contacto-grid {
+    margin-top: 30%;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas: 
+      "banner-contacto banner-contacto banner-contacto"
+      "titulo-contacto titulo-contacto titulo-contacto"
+      "redes-contacto formulario-contacto formulario-contacto";
+
+      @include mobile {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "banner-contacto"
+        "titulo-contacto"
+        "formulario-contacto"
+        "redes-contacto"
+        ;
+    }
+
+      @include tablet {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "banner-contacto banner-contacto"
+        "titulo-contacto titulo-contacto"
+        "redes-contacto formulario-contacto";
+    } 
+
+      @include desktop;
+     
+
+    .contenedor-contacto {
+        position: relative;
+        height: 220px; 
+    }  
+      
+      .contacto-fondo {
+        grid-area: banner-contacto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 75%;
+        background-image: url(../images/contactofondo.png);
+        background-position: center 15%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.8;
+        @extend .sombra;
+        @include mobile {
+            height: 55%;
+        }
+        @include tablet {
+          height: 60%;
+        }
+      }
+      
+      .content-contacto {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        text-align: left;
+        margin-top: 350px;
+        margin-left: 80px;
+        @extend .fade-up;
+        @include mobile {
+          margin-top: 45%;
+          margin-left: 0;
+          text-align: center; 
+          width: 100%;
+      }
+    
+      }
+      
+      h1, h4 {
+        color: rgb(253, 253, 253);
+        @extend .sombra-texto;
+      }
+      
+      hr {
+        width: 20%;
+        border: none;
+        border-top: 2px solid rgb(0, 0, 0);
+        margin: 10px 0;
+        @include mobile {
+          border-top: transparent;
+        }
+      }
+      
+      .contact-button-sucursales {
+        padding: 10px 20px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: large;
+        width: 20%;
+        @extend .mi-boton;
+        @include mobile {
+            width: 30%;
+        }
+      }
+
+      .titulo-contacto {
+        grid-area: titulo-contacto;
+        margin-top: 9%;
+        @include mobile{
+          margin-top: 50%;
+          margin-bottom: 2%;
+        }
+        @include tablet {
+          margin-top: 40%;
+        }
+        
+        h2 {
+          font-size: 48px;
+          color: $color-h2;
+          text-align: center;
+          span{
+            color: $color-resaltado;
+            font-weight: bold;
+          }
+        }
+        h3{
+          font-size: 20px;
+          text-align: center;
+          margin: 0 12%;
+          @include mobile {
+            margin: 0 5%;
+            font-size: large;
+        }
+        }
+      }
+
+      .formulario-contacto {
+        grid-area: formulario-contacto;
+        width: 75%;
+        margin: 5% 3%;
+        @include mobile{
+            margin: 0;
+            width: 90%;
+            justify-self: center;
+        }
+
+       @include tablet {
+        justify-self: center;
+        margin: 3% 0;
+        width: 95%;
+       }
+
+        .btn-contacto {
+            margin: 3%;
+            @include mobile {
+                margin-top: 5%;
+            }
+            @include tablet {
+                margin-top: 5%;
+            }
+        }
+       
+      }
+      .preguntas {
+        height: 85%;
+    }
+      .redes-contacto {
+        grid-area: redes-contacto;
+        margin: 5%;
+        display: flex;
+        @include mobile{
+            margin: 3% 0;
+        }
+       
+         .redes {
+            flex-direction: column;
+            align-items: center;
+            @include mobile{
+                flex-direction: row;
+            }
+            @include tablet {
+                flex-direction: row;
+            }
+            
+            .card {
+                margin:2%;
+                
+                .card-body {
+                    text-align: center;
+                    @include mobile {
+                        height: 185px;
+                        text-align: center;
+                    }     
+                    @include tablet {
+                        height: 240px;
+                        text-align: center;
+                    }                  
+                }
+
+                h5{
+                    color: $color-clases;
+                    text-align: center;
+                }
+                .redes-sociales {
+                    display: flex; 
+                    justify-content: center;
+                  }
+                  
+                  .logo-facebook {
+                    display: inline-block;
+                    width: 55px; 
+                    height: 55px; 
+                    background-size: cover;
+                    margin-right: 5%;
+                  }
+                  .logo-instagram {
+                    display: inline-block;
+                    width: 50px; 
+                    height: 55px; 
+                    background-size: cover;
+                    margin-right: 5%;
+                  }
+                  
+                  .logo-facebook {
+                    background-image: url(../images/facebookcopia.svg); 
+                  }
+                  
+                  .logo-instagram {
+                    background-image: url(../images/instagramcopia.svg); 
+                  }
+            }
+
+         }
+      
+       
+      }
+    }

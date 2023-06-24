@@ -1,0 +1,56 @@
+// sombras
+
+.sombra-texto {
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.sombra {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+// animacion agrandar
+
+.animacion-seleccion {
+    transition: transform 0.3s ease; 
+  
+    &:hover {
+      transform: scale(1.1); 
+    }
+}
+
+// animacion subir
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpAnimation 3s ease-in-out forwards;
+}
+
+@keyframes fadeUpAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+//botones
+
+.mi-boton{
+    &:hover{
+    background-color: rgb(3, 66, 5); 
+    color: $color-clases; 
+    border-color: #000000;
+  }
+}
+
+.mi-boton-wp{
+  &:hover{
+  background-color: #28a745; 
+  color: $color-clases; 
+  border-color: #000000;
+}
+}
