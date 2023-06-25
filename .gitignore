@@ -1,3 +1,2 @@
-# Ignora archivos del sistema Mac git add .
-
-.node_modules
+node_modules/
+.gitignore
